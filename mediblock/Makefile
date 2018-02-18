@@ -5,11 +5,6 @@ all: test
 test:
 	tox
 
-# Setup or update virtualenv for development
-.PHONY: update-virtualenv
-update-virtualenv:
-	bin/update-virtualenv.sh
-
 # Runs the program
 .PHONY: sync
 sync:
@@ -23,7 +18,7 @@ deploy:
 # Runs the program
 .PHONY: run
 run:
-	bin/db_proxy.sh & bin/runserver.sh; fg
+	db_proxy.sh & runserver.sh; fg
 
 .PHONY: clean
 clean:
