@@ -31,7 +31,11 @@ SECRET_KEY = 'az%e+v1a*6e!f#!pu533weij(p18%lw_be3nbdt2g%v2)-7_j5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'mediblock-195521.appspot.com',
+    'localhost'
+]
 
 
 # Application definition
@@ -79,13 +83,22 @@ WSGI_APPLICATION = 'mediblock.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mediblock',
+        'USER': 'mediblock',
+        'PASSWORD': 'mediblock',
+        'HOST': '/cloudsql/mediblock-195521:us-central1:mediblock-vm',
+        'PORT': '5432',
     }
 }
 
+if os.getenv('GAE_INSTANCE'):
+    pass
+else:
+    DATABASES['default']['HOST'] = '127.0.0.1'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -123,6 +136,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# STATIC_URL = 'https://storage.googleapis.com/mediblock/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [

@@ -10,6 +10,9 @@ def index(request):
 
 def signIn(request):
     if request.method == 'POST':
+        # always allow for now
+        if True:
+            return render(request, "index.html")
         email = request.POST.get('email')
         password = request.POST.get('password')
         try:

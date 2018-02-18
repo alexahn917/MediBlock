@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mediblock-195521",
+  "private_key_id": "7fd93d0ba0936cbd39174fd8548c74892ddf37aa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDDFv1dRxScVvKG\nunjo2V492XbLu/VmaMNhhI+3/8OUEW2nbRN5d+P6yN7KjMgUACrzFLib2tGkgLAS\n2EB2XVMYle/3dubToif3KUO9Vv5Y4F2fFuRYycnX/s1Q0CxNeZtMe4bKbSJZhw1k\n9w0pL8jGPswERBH6fd6zd2FjTYFbrbFsbxzYL10ldRfv/2iGoGf20dPVzVA2Gjb4\nwFbILXnDKIBjLcGqYBFfz+UN703ZOom3cDNUKUbJ0Ka3z7J0cS3pN8TvLTCR5kOU\nm/gRu5UuZKr26/0mv+QeOl/B6IZ8DaDWlmjirZYTgFKoAo6dpDDYTgDfgHZTyWw1\n2vDj7cvdAgMBAAECggEAAKxTomltcU/bfddAefObY+gLHsJx7+zKe4dkO9Oh1Nyx\n/+Yo/BvphxHdkMzR9PtxkOUnzvt2kw3vr7qPSy6YUkXt56Qnyd/0S+HDPDUU51M0\nMrHuU4I8mrmoe7Q8LqHap1OSlrFJtZZwpFM151kk/pswVMJe1gs7RkmnboFaOXJ8\nS9kTPtfuf0OZlZEX0cj0PI80jQSsoScwGSjb1pAjO8yGSE6ONSStSmUQzFbrRWJm\n/zV6P6KB0vTb6ijz9PHsd9HNKfnh2/zpPMa7Ni9gq1h0Nf76oq/evICEjl5rYhgF\n1Hm63MCiVqwmTM4d1Po+YOvfFoFOltkXle/D5tyYAQKBgQD6JJ2EW/5EomSMYrsO\n0zTRrK9nsWGImnoEVTX6B2L9X2pVSPG9acrbWusyZKvad9vvHuH0dJGV8t6yhxNL\nFU2alVwlwMB39Xn0k5VW9fT7ld5xcMbs5/Zx2fjMj+yCMtSj7U2adHLlMRbf4yMv\nq41munYLc6GVzu1DJHgfr6ZuqQKBgQDHqGEczbok5OrBLKa0oaOQDEaZeV+mcd7H\n+zY2xCOfLa1ST+1lf7uDJT6rCGBE2SKzVoJU3AUiM5sUsnh/fLVL642G+vnjeZax\n7Ih0TCpP3xoMLzZ2NU8Uj/fsm0uK80DsWOB/2ML3GnaJPEACFaBF7gNrfFRHlrrq\nKuAh2lv4FQKBgQDP4hgqRM2mupL3fKHaqzpNOsc3VNoqzb6z1SEbnoHs8hwLrqiA\ncuhMrl2irrmHwW69ZhwArdPEG2hqVAl7r8OjwZcoJO2PhCmLUg+diqDDaQTJoCEi\nB5Dvg2fakY3LknTXm0KQJ1DJGqfY/wph9p94DWRHFhzmxGa4Exnls3OMqQKBgQDH\nWZv9QnyFsfujfY3F9U522Yr0WnfinPev/WgYLqbSnKzd7ug929fCDkIQS4CzvYok\nPlBLopONnrFNbRVbVY0/jKX3DEjNk+2fIWjtlc75iO1dFRbv2DJpeYY2PKikyFUe\np28gt7GTQFzykbHnYuhwakIH5E/SWvGuNbksk/YYMQKBgQDvI2jJ6Su6KuK88/7S\nBX2RLpNttTEBBccas8cQWhHoOYJEk1m/Lv4oGO5SY9MShBOZk01KjcOpVhQB8dg2\nW35Lx3ZXOQ4YzdUrbMQkxF9PxIxaVV7kIB3Mwn5BZlfPgK26xm2UZKQTk9hoI0Rn\nny9swGGAejAdd/bH+DGumVRWyA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mediblock-195521@appspot.gserviceaccount.com",
+  "client_id": "105949201820726435030",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mediblock-195521%40appspot.gserviceaccount.com"
+}
