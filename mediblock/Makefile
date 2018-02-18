@@ -8,7 +8,7 @@ test:
 # Runs the program
 .PHONY: sync
 sync:
-	gsutil rsync -R static/ gs://mediblock/static
+	gsutil rsync -R static/ gs://mediblock-static/static
 
 # Deploys package to the App Engine
 .PHONY: deploy
