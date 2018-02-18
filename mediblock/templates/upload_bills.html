@@ -1,0 +1,20 @@
+{% extends 'menu.html' %}
+{% block main_content %}
+{% csrf_token %}
+
+<div class="container">
+  <h2>Medical Bills History</h2>
+  <div class="divider"></div>
+  <ul class="collection">
+    {% for bill in bills %}
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title"> BILL {{bill.num}} </span>
+      <p>ID: {{ bill.id }}</p>
+      <p>Timestamp: {{ bill.timestamp }}<br>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

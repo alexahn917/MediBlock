@@ -1,0 +1,43 @@
+{% extends 'main_template.html' %}
+
+{% if alert %}
+<script>
+    alert('{{ alert }}');
+</script>
+{% endif %}
+
+{% block main_content %}
+<div class="container">
+  <div class="row">
+    <div class="col s12 m9 l10">
+      <div class="title center-align">
+        <h5>MediBlock</h5>
+        <p>Sign In</p>
+        <div class="divider"></div>
+      </div>
+
+      <form action="/signin/" method="post">
+        {% csrf_token %}
+        <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input id="email" name="email" type="email" class="validate">
+            <label class="active" for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 offset-s3">
+            <input id="password" name="password" type="password" class="validate">
+            <label class="active" for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col center s6 offset-s3">
+            <input type="submit" value="SignIn">
+          </div>
+        </div>
+      </form>
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
