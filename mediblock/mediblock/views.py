@@ -2,7 +2,7 @@ import base64
 import datetime
 import pygal
 import pandas as pd
-from PIL import Image
+import random
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.conf import settings
@@ -84,9 +84,9 @@ def chart(request):
     csv_data_points = pd.Series(csv_data.iloc[:,2])
     py_chart = pygal.Bar()
     py_chart.x_labels = map(str, range(2013, 2013))
-    py_chart.add('Debridement & Destruction', list(csv_data_points[:50].astype('float')))
-    py_chart.add('Occupational  Therapy', list(csv_data_points[50:100].astype('float') * 2))
-    py_chart.add('Echocardiography', list(csv_data_points[100:150].astype('float') * 0.6))
+    py_chart.add('Debridement & Destruction', list(csv_data_points[:50].astype('float') * random.random() * random.randrange(1, 3)))
+    py_chart.add('Occupational  Therapy', list(csv_data_points[50:100].astype('float') * random.random() * random.randrange(2, 4)))
+    py_chart.add('Echocardiography', list(csv_data_points[100:150].astype('float') * random.random() * random.randrange(1, 3)))
     data = py_chart.render_data_uri()
 
     return render(request, 'chart.html', {'data': data})

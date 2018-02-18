@@ -3,17 +3,39 @@
 {% csrf_token %}
 <div class="container">
   <div class="section">
-    <h2 class="header center-align">MediBlock Data Chart</h2>
+    <h2 class="header center-align" id="top">MediBlock Data Chart</h2>
     <div class="divider" style="margin-top: 3%"></div>
+    <div class="row" style="margin-bottom: 3%">
+      <div class="col right">
+        <a class='dropdown-button btn light-blue' href='#' data-activates='dropdown1'>Medical Treatment</a>
+        <ul id='dropdown1' class='dropdown-content light-blue-text'>
+          <li><a href="#!">Debridgement</a></li>
+          <li><a href="#!">Fracture</a></li>
+          <li class="divider"></li>
+          <li><a href="#!"><i class="material-icons">hearing</i>Hearing</a></li>
+          <li><a href="#!"><i class="material-icons">healing</i>Rehap</a></li>
+          <li><a href="#!"><i class="material-icons">insert_emoticon</i>Psycological</a></li>
+        </ul>
+
+        <a class='dropdown-button btn' href='#' data-activates='dropdown2'>Graph Analysis</a>
+        <ul id='dropdown2' class='dropdown-content'>
+          <li><a href="#!">Bar Graph</a></li>
+          <li><a href="#!">Histogram</a></li>
+          <li class="divider"></li>
+          <li><a href="#!"><i class="material-icons">exposure</i>Linear Regression</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col s8 m8 offset-s2 offset-m2">
         <div class="card enclosed-card">
           <div class="card-image waves-effect waves-block waves-light">
-            <img src="{{data}}"/>
+            <img id="chart" src="{{data}}"/>
           </div>
           <div class="divider"></div>
           <div class="center-align">
-            <a class="materialize-red lighten-2 waves-effect waves-light btn-large center-align">
+            <a href="/chart#top" class="materialize-red lighten-2 waves-effect waves-light btn-large center-align">
               <i class="material-icons right">update</i>
               Update
             </a>
