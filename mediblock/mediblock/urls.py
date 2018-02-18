@@ -25,6 +25,7 @@ urlpatterns = [
     path('logout/', views.logout),
     path('medical_bills/', views.medical_bills),
     path('medical_bills/<medical_bill_id>', views.medical_bill_info),
+    path('upload/', views.upload),
     path('chart/', views.chart),
     path('profile/', views.profile),
     path('', include('google-api.urls'))

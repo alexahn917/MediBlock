@@ -1,6 +1,8 @@
+import base64
 import datetime
 import pygal
 import pandas as pd
+from PIL import Image
 from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.conf import settings
@@ -62,6 +64,19 @@ def medical_bill_info(request, medical_bill_id):
         'blockchain_timestamp': blockchain_timestamp,
         'blockchain_img_base64': blockchain_img_base64,
     })
+
+def upload(request):
+    if 'file' in request.FILES:
+        filename = request.POST.get('filename')
+        if not filename.endswith('jpg') and not filename.endswith('jpeg'):
+            return redirect('/medical_bills/', {'alert':'you can only upload jpg or jpeg files'})
+        img_base64_str = base64.b64encode(request.FILES['file'].read()).decode("utf-8")
+        timetsamp = datetime.datetime.now().isoformat()
+        result = settings.FIREBASE_DB.child("requests").push({})
+        id = result['name']
+        settings.FIREBASE_DB.child("requests").child(id).set({'id':id, 'timestamp': timetsamp})
+        settings.FIREBASE_DB.child("requests_imgs").child(id).set({'image': img_base64_str})
+    return redirect('/medical_bills/')
 
 def chart(request):
     csv_data = pd.read_csv('mediblock_data.csv')

@@ -13,10 +13,10 @@
     <div class="divider"></div>
     <div class="row">
       <div class="col s12 m12 l12">
-        <!--<div class="title center-align">-->
-          <!--<h5 class="subsubheader">Please Sign In</h5>-->
-          <!--<div class="divider"></div>-->
-        <!--</div>-->
+        <div class="title center-align">
+          <h5 class="subsubheader">Please Sign In</h5>
+          <div class="divider"></div>
+        </div>
 
         <form action="/signin/" method="post">
           {% csrf_token %}
@@ -35,7 +35,7 @@
 
           <div class="row">
             <div class="input-field col center s6 offset-s3">
-              <button class="btn waves-effect waves-light materialize-red lighten-2" type="submit" name="action">Sign In
+              <button class="btn waves-effect waves-light materialize-red lighten-2" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
               </button>
             </div>

@@ -1,7 +1,12 @@
 {% extends 'menu.html' %}
-{% block main_content %}
-{% csrf_token %}
 
+{% if alert %}
+<script>
+    alert('{{ alert }}');
+</script>
+{% endif %}
+
+{% block main_content %}
 <div class="container">
   <div class="section">
     <h2 class="header center-align">MediBlock Blockchains</h2>
@@ -11,7 +16,7 @@
       {% for bill in bills %}
       <li class="collection-item avatar">
         <i class="material-icons circle green">insert_chart</i>
-        <span class="title"> BILL {{bill.num}} </span>
+        <span class="title"> Transaction {{bill.num}} </span>
         <p>ID: {{ bill.id }}</p>
         <p>Timestamp: {{ bill.timestamp }}<br>
           <a href="{{ bill.id }}" class="secondary-content">
@@ -20,12 +25,33 @@
       {% endfor %}
       {% endif %}
     </ul>
-    <div class="center-align">
-      <a class="materialize-red lighten-2 waves-effect waves-light btn-large center-align">
-        <i class="material-icons right">cloud</i>
-        Upload
-      </a>
-    </div>
+    <form action="/upload/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="file-field">
+        <div class="row">
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" name="filename">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s1 m1 offset-s4 offset-m4">
+            <div class="btn waves-effect waves-light materialize-red lighten-3">
+              Select File
+              <input type="file" name="file" accept="image/jpeg, image/jpg">
+            </div>
+          </div>
+          <div class="col s1 m1 offset-s1 offset-m1">
+            <button class="btn waves-effect waves-light materialize-red lighten-2" type="submit" name="action">
+              Upload<i class="material-icons right">cloud</i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+    {% endif %}
   </div>
 </div>
 {% endblock %}

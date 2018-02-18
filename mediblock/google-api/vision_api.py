@@ -66,7 +66,6 @@ def render_doc_text(base64str):
         FeatureType.PARA:'red',
         FeatureType.WORD:'yellow'
     }
-
     fout = open('temp.jpg', 'wb')
     fout.write(base64.b64decode(base64str))
     fout.flush()
