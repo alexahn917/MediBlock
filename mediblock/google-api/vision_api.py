@@ -1,4 +1,5 @@
 # coding: utf-8
+import base64
 import io
 from enum import Enum
 from google.cloud.vision import types
@@ -59,16 +60,20 @@ def get_document_bounds(image_file, features):
 
     return document.text, type_bounds
 
-def render_doc_text(filein):
+def render_doc_text(base64str):
     typeColors = {
         FeatureType.PAGE:'blue',
         FeatureType.PARA:'red',
         FeatureType.WORD:'yellow'
     }
-    image = Image.open(filein)
-    text, bounds = get_document_bounds(filein, typeColors)
-    draw_boxes(image, bounds, typeColors)
 
-    # if fileout is not 0:
-    #     image.save(fileout)
-    # image.show()
+    fout = open('temp.jpg', 'wb')
+    fout.write(base64.b64decode(base64str))
+    fout.flush()
+    image = Image.open('temp.jpg')
+    text, bounds = get_document_bounds('temp.jpg', typeColors)
+    draw_boxes(image, bounds, typeColors)
+    buffered = io.BytesIO()
+    image.save(buffered, format="JPEG")
+    img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
+    return img_str, text

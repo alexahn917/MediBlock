@@ -1,0 +1,31 @@
+{% extends 'menu.html' %}
+{% block main_content %}
+{% csrf_token %}
+
+<div class="container">
+  <div class="section">
+    <h2 class="header center-align">MediBlock Blockchains</h2>
+    <div class="divider"></div>
+    <ul class="collection">
+      {% if bills %}
+      {% for bill in bills %}
+      <li class="collection-item avatar">
+        <i class="material-icons circle green">insert_chart</i>
+        <span class="title"> BILL {{bill.num}} </span>
+        <p>ID: {{ bill.id }}</p>
+        <p>Timestamp: {{ bill.timestamp }}<br>
+          <a href="{{ bill.id }}" class="secondary-content">
+            <i class="medium material-icons">arrow_forward</i></a>
+      </li>
+      {% endfor %}
+      {% endif %}
+    </ul>
+    <div class="center-align">
+      <a class="materialize-red lighten-2 waves-effect waves-light btn-large center-align">
+        <i class="material-icons right">cloud</i>
+        Upload
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

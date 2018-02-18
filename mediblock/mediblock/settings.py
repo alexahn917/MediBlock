@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'material',
-    'material.frontend',
 ]
 
 MIDDLEWARE = [
@@ -149,7 +147,7 @@ FIREBASE_DB = FIREBASE.database()
 FIREBASE_AUTH = FIREBASE.auth()
 
 def stream_requests(message):
-    # return render(request, 'upload_bills.html')
+    # return render(request, 'medical_bills.html')
     print(message['event'])
     print(message['path'])
     print(message['data'])

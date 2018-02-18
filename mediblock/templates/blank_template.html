@@ -1,18 +1,44 @@
 <html>
-  <head>
-    <title>MediBlock</title>
-    {% load static %}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'materialize/css/materialize.css' %}" media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="{% static 'materialize/js/materialize.js' %}"></script>
-    <script src="{% static 'main.js' %}"></script>
-    {% block head_content %}
-    {% endblock %}
-  </head>
-  <body>
-    {% block body_content %}
-    {% endblock %}
-  </body>
+<head>
+  <title>MediBlock</title>
+  {% load static %}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'materialize/css/materialize.css' %}"
+        media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="{% static 'materialize/js/materialize.js' %}"></script>
+  <script src="{% static 'main.js' %}"></script>
+  {% block head_content %}
+  {% endblock %}
+</head>
+<body>
+{% block body_content %}
+{% endblock %}
+</body>
+<footer class="page-footer" style="margin-top: 5%">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">MediBlock</h5>
+        <p class="grey-text text-lighten-4">Decentralized medical costs for everyone.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Founders</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Alex Ahn</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Jake Kim</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">SungWoo Park</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">KyuSang Han</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      MediBlock © 2018
+      <a class="grey-text text-lighten-4 right" href="#!">Contact</a>
+    </div>
+  </div>
+</footer>
 </html>

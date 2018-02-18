@@ -1,8 +1,52 @@
+.header {
+    color: #ee6e73;
+    font-weight: 300;
+}
+
+.subheader {
+    color: #ee6e90;
+    font-weight: 200;
+}
+
+.subsubheader {
+    color: #EE7EA4;
+}
+
+.divider {
+    margin: 5%;
+}
+
+.index .header {
+    margin-top: 7%;
+}
+
+.index .subheader {
+    margin: 7%;
+}
 
 .title .divider {
     margin-bottom: 5%;
 }
 
-.tutorial {
-    margin-top: 3%;
+.enclosed-card {
+    padding: 10%;
+    padding-top: 5%;
+}
+
+.card-image {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.card-words {
+    padding: 10%;
+}
+
+.card-words .card-content {
+    margin: 5%;
+}
+
+.a {
+    font-weight: 200;
 }
