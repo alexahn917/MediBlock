@@ -13,7 +13,7 @@ httplib2==0.10.3
 idna==2.6
 image==1.5.19
 jws==0.1.3
-numpy==1.14.0
+numpy==1.22.0
 oauth2client==3.0.0
 pandas==0.22.0
 Pillow==5.0.0
